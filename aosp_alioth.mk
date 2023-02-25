@@ -24,6 +24,8 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP  := true
 TARGET_USES_MINI_GAPPS := false
 TARGET_GAPPS_VARIANT := PIXEL
+TARGET_USES_MICAMERA := true
+TARGET_USES_MIREMOTE := true
 
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/alioth/device.mk)

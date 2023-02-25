@@ -30,10 +30,14 @@ PRODUCT_PACKAGES += \
     libpiex_shim
 
 # Call the MiuiCamera setup
+ifeq ($(TARGET_USES_MICAMERA),true)
 $(call inherit-product-if-exists, vendor/xiaomi/alioth-miuicamera/products/miuicamera.mk)
+endif
 
 # Call the MiRemote setup
+ifeq ($(TARGET_USES_MIREMOTE),true)
 include /home/varad/android/vendor/xiaomi/miremote/config.mk
+endif
 
 # Dolby Support
 TARGET_USES_MIUI_DOLBY := true

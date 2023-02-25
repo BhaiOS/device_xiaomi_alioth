@@ -11,9 +11,11 @@ include device/xiaomi/sm8250-common/BoardConfigCommon.mk
 DEVICE_PATH := device/xiaomi/alioth
 
 #Inherit from proprietary files for miuicamera
+ifeq ($(TARGET_USES_MICAMERA),true)
 include vendor/xiaomi/alioth-miuicamera/products/board.mk
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+endif
 
 BUILD_BROKEN_DUP_RULES := true
 
