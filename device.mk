@@ -29,6 +29,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libpiex_shim
 
+# Call the MiRemote setup
+include /home/varad/android/vendor/xiaomi/miremote/config.mk
+
 # Dolby Support
 TARGET_USES_MIUI_DOLBY := true
 
