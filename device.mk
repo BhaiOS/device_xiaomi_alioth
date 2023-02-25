@@ -29,6 +29,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libpiex_shim
 
+# Call the MiuiCamera setup
+$(call inherit-product-if-exists, vendor/xiaomi/alioth-miuicamera/products/miuicamera.mk)
+
 # Call the MiRemote setup
 include /home/varad/android/vendor/xiaomi/miremote/config.mk
 
